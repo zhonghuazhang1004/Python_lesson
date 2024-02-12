@@ -15,6 +15,6 @@ With love and best wishes,
 """
 print(f"{recipientName}, let's celebrate your {(2024 - date_of_birth)} years of awesomeness!\n"
       f"Wishing you a day filled with joy and laughter as you turn {(2024 - date_of_birth)}!\n"
-      f"{message}/n"
+      f"{message}\n"
       f"With love and best wishes,\n"
       f"{senderName}")
