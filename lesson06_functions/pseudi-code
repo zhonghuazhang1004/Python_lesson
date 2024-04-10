@@ -1,0 +1,123 @@
+function display_commands():
+    display "Available commands:"
+    display "'create': Start user creation process."
+    display "'manage': Start user management process."
+    display "'end': Terminate the program."
+
+function create_user():
+    while True:
+        display "Enter the type of user to create: student, teacher, homeroom teacher, end"
+        user_type = input()
+
+        if user_type == "student":
+            create_student()
+        else if user_type == "teacher":
+            create_teacher()
+        else if user_type == "homeroom teacher":
+            create_homeroom_teacher()
+        else if user_type == "end":
+            break
+        else:
+            display "Invalid user type. Please try again."
+
+database["teachers"][f"{first_name} {last_name}"] =
+{"first_name": first_name, "last_name": last_name, "subject": subject, "classes_taught": classes_taught}
+
+
+function create_student():
+    display "Enter student's first name:"
+    first_name = input()
+    display "Enter student's last name:"
+    last_name = input()
+    display "Enter student's class name (e.g., '3C'):"
+    class_name = input()
+    # Create student object and add it to the database
+
+function create_teacher():
+    display "Enter teacher's first name:"
+    first_name = input()
+
+    display "Enter teacher's last name:"
+    last_name = input()
+
+    display "Enter the subject they teach:"
+    subject = input()
+
+    classes_taught = []
+    while True:
+        display "Enter class name they teach (or enter nothing to finish):"
+        class_name = input()
+        if class_name == "":
+            break
+        else:
+            classes_taught.append(class_name)
+    # Create teacher object and add it to the database
+
+function create_homeroom_teacher():
+    display "Enter homeroom teacher's first name:"
+    first_name = input()
+    display "Enter homeroom teacher's last name:"
+    last_name = input()
+    display "Enter the class they lead:"
+    class_name = input()
+    # Create homeroom teacher object and add it to the database
+
+function manage_users():
+    while True:
+        display "Enter the option to manage: class, student, teacher, homeroom teacher, end"
+        manage_option = input()
+
+        if manage_option == "class":
+            manage_class()
+        else if manage_option == "student":
+            manage_student()
+        else if manage_option == "teacher":
+            manage_teacher()
+        else if manage_option == "homeroom teacher":
+            manage_homeroom_teacher()
+        else if manage_option == "end":
+            break
+        else:
+            display "Invalid option. Please try again."
+
+function manage_class():
+    display "Enter the class to display (e.g., '3C'):"
+    class_name = input()
+    # Display all students in the class and the homeroom teacher
+
+function manage_student():
+    display "Enter student's first name:"
+    first_name = input()
+    display "Enter student's last name:"
+    last_name = input()
+    # Display all classes the student attends and the teachers of these classes
+
+function manage_teacher():
+    display "Enter teacher's first name:"
+    first_name = input()
+    display "Enter teacher's last name:"
+    last_name = input()
+    # Display all classes the teacher teaches
+
+function manage_homeroom_teacher():
+    display "Enter homeroom teacher's first name:"
+    first_name = input()
+    display "Enter homeroom teacher's last name:"
+    last_name = input()
+    # Display all students the homeroom teacher leads
+
+# Main program
+display_commands()
+
+while True:
+    display "Enter a command:"
+    command = input()
+
+    if command == "create":
+        create_user()
+    else if command == "manage":
+        manage_users()
+    else if command == "end":
+        break
+    else:
+        display "Invalid command. Please try again."
